@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Paymentgatewayapp">
-        <activity android:name=".debitCard"></activity>
+        <activity android:name=".Compare"></activity>
+        <activity android:name=".debitCard" />
         <activity android:name=".CardForm" />
         <activity android:name=".malawihousing" />
         <activity android:name=".universityfees" />
