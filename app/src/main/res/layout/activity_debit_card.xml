@@ -12,23 +12,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="continue"
-        app:backgroundTint="#009688"
+        app:backgroundTint="#2196F3"
+        app:cornerRadius="23dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintHorizontal_bias="0.29"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.654" />
+        app:layout_constraintVertical_bias="0.758" />
 
     <EditText
         android:id="@+id/Dnumber"
-        android:layout_width="200dp"
-        android:layout_height="41dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/simple_imput"
+        android:padding="8dp"
         android:ems="10"
         android:hint="enter card number"
         android:inputType="number"
         android:textColor="#6010ED"
-        android:background="@drawable/simple_imput"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.025"
@@ -38,13 +40,14 @@
 
     <EditText
         android:id="@+id/dccv"
-        android:layout_width="126dp"
-        android:layout_height="41dp"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/simple_imput"
         android:ems="10"
         android:hint="enter cvv code"
+        android:padding="8dp"
         android:inputType="number"
         android:textColor="#6010ED"
-        android:background="@drawable/simple_imput"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.978"
@@ -54,13 +57,14 @@
 
     <EditText
         android:id="@+id/Dname"
-        android:layout_width="259dp"
-        android:layout_height="41dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/simple_imput"
         android:ems="10"
         android:hint="enter card holder name"
+        android:padding="8dp"
         android:inputType="textPersonName"
         android:textColor="#6010ED"
-        android:background="@drawable/simple_imput"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,65 +74,67 @@
     <EditText
         android:id="@+id/Dday"
         android:layout_width="98dp"
-        android:layout_height="41dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/simple_imput"
         android:ems="10"
         android:hint="day"
+        android:padding="8dp"
         android:inputType="number"
         android:textColor="#6010ED"
-        android:background="@drawable/simple_imput"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintHorizontal_bias="0.019"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516" />
+        app:layout_constraintVertical_bias="0.581" />
 
     <EditText
         android:id="@+id/Dyear"
         android:layout_width="83dp"
-        android:layout_height="36dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/simple_imput"
         android:ems="10"
         android:hint="year"
+        android:padding="8dp"
         android:inputType="number"
         android:textColor="#6010ED"
-        android:background="@drawable/simple_imput"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintHorizontal_bias="0.981"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.516" />
+        app:layout_constraintVertical_bias="0.584" />
 
     <EditText
         android:id="@+id/Dmonth"
         android:layout_width="101dp"
-        android:layout_height="42dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/simple_imput"
         android:ems="10"
+        android:padding="8dp"
         android:hint="month"
         android:inputType="number"
         android:textColor="#6010ED"
-        android:background="@drawable/simple_imput"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.574"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.515" />
+        app:layout_constraintVertical_bias="0.58" />
 
     <TextView
         android:id="@+id/txvf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="expiration date"
-        android:textSize="23dp"
         android:textColor="#6010ED"
+        android:textSize="23dp"
         app:backgroundTint="#6010ED"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.521"
+        app:layout_constraintHorizontal_bias="0.523"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.444" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txvg"
@@ -196,8 +202,8 @@
 
     <EditText
         android:id="@+id/tve"
-        android:layout_width="78dp"
-        android:layout_height="8dp"
+        android:layout_width="73dp"
+        android:layout_height="4dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -209,8 +215,8 @@
 
     <EditText
         android:id="@+id/tvf"
-        android:layout_width="109dp"
-        android:layout_height="13dp"
+        android:layout_width="112dp"
+        android:layout_height="3dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -288,24 +294,98 @@
 
     <TextView
         android:id="@+id/tvxa"
-        android:layout_width="62dp"
-        android:layout_height="7dp"
+        android:layout_width="126dp"
+        android:layout_height="47dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintHorizontal_bias="0.963"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.051" />
 
     <TextView
         android:id="@+id/tvb"
-        android:layout_width="105dp"
-        android:layout_height="42dp"
+        android:layout_width="150dp"
+        android:layout_height="9dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintHorizontal_bias="0.62"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.901" />
+        app:layout_constraintVertical_bias="0.925" />
+
+    <Button
+        android:id="@+id/btn13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONFIRM"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.758" />
+
+    <EditText
+        android:id="@+id/tvi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06" />
+
+    <TextView
+        android:id="@+id/bal"
+        android:layout_width="129dp"
+        android:layout_height="42dp"
+        android:textColor="#2196F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.944"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.442" />
+
+    <TextView
+        android:id="@+id/Mbal"
+        android:layout_width="160dp"
+        android:layout_height="33dp"
+        android:textColor="#2196F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.058"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.436" />
+
+    <TextView
+        android:id="@+id/Cbal"
+        android:layout_width="331dp"
+        android:layout_height="50dp"
+        android:textColor="#2196F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.659" />
+
+    <EditText
+        android:id="@+id/Ccbal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tvd"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.845" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

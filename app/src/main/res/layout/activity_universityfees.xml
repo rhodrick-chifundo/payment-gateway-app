@@ -40,13 +40,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="debit card"
-        app:backgroundTint="#009688"
+        app:backgroundTint="#2196F3"
+        app:cornerRadius="23dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.099"
+        app:layout_constraintHorizontal_bias="0.122"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.959" />
+        app:layout_constraintVertical_bias="0.913" />
 
     <EditText
         android:id="@+id/feeAmount"
@@ -54,9 +55,10 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter amount"
-        android:inputType="textPersonName"
+        android:inputType="number"
+        android:background="@drawable/simple_imput"
         android:textColor="#6010ED"
-        app:backgroundTint="#6010ED"
+        android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,9 +71,10 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter id number"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textColor="#6010ED"
-        app:backgroundTint="#6010ED"
+        android:background="@drawable/simple_imput"
+        android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.499"
@@ -84,12 +87,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="credit card"
+        app:backgroundTint="#2196F3"
+        app:cornerRadius="23dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.835"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.958" />
+        app:layout_constraintVertical_bias="0.923" />
 
     <TextView
         android:id="@+id/txv11"

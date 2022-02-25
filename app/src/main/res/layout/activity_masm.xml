@@ -11,7 +11,7 @@
         android:id="@+id/txv7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MEDICAL AID SOCIETY OF MALAWI"
+        android:text="MASM"
         android:textColor="#6010ED"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -39,23 +39,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="debit card"
-        app:backgroundTint="#009688"
+        app:backgroundTint="#2196F3"
+        app:cornerRadius="23dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintHorizontal_bias="0.215"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941" />
+        app:layout_constraintVertical_bias="0.928" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/masamount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Enter amount"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textColor="#6010ED"
-        app:backgroundTint="#6010ED"
+        android:background="@drawable/simple_imput"
+        android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.565"
@@ -64,14 +66,15 @@
         app:layout_constraintVertical_bias="0.567" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/masmita"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="enter membership number"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:textColor="#6010ED"
-        app:backgroundTint="#6010ED"
+        android:background="@drawable/simple_imput"
+        android:padding="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.565"
@@ -98,12 +101,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="credit card"
+        app:backgroundTint="#2196F3"
+        app:cornerRadius="23dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.866"
+        app:layout_constraintHorizontal_bias="0.862"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.941" />
+        app:layout_constraintVertical_bias="0.928" />
 
     <ImageView
         android:id="@+id/imageView2"

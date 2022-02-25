@@ -12,44 +12,48 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="debit card"
-        app:backgroundTint="#009688"
+        app:backgroundTint="#2196F3"
+        app:cornerRadius="23dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintHorizontal_bias="0.149"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931" />
+        app:layout_constraintVertical_bias="0.91" />
 
     <EditText
         android:id="@+id/escamnt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/simple_imput"
         android:ems="10"
         android:hint="enter amount"
-        android:inputType="text"
+        android:inputType="number"
+        android:padding="8dp"
         android:textColor="#6010ED"
-        app:backgroundTint="#6010ED"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.713" />
+        app:layout_constraintVertical_bias="0.596" />
 
     <EditText
         android:id="@+id/escmit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/simple_imput"
         android:ems="10"
         android:hint="enter meter number"
-        android:inputType="text"
+        android:inputType="number"
+        android:padding="8dp"
         android:textColor="#6010ED"
-        app:backgroundTint="#6010ED"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.603" />
+        app:layout_constraintVertical_bias="0.712" />
 
     <TextView
         android:id="@+id/txv3"
@@ -87,22 +91,24 @@
         android:textSize="22dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.519"
+        app:layout_constraintHorizontal_bias="0.558"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.826" />
+        app:layout_constraintVertical_bias="0.8" />
 
     <Button
         android:id="@+id/btn7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="credit card"
+        app:backgroundTint="#2196F3"
+        app:cornerRadius="23dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.891"
+        app:layout_constraintHorizontal_bias="0.879"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.931" />
+        app:layout_constraintVertical_bias="0.91" />
 
     <ImageView
         android:id="@+id/imageView"
