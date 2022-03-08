@@ -40,7 +40,14 @@ public class masm extends AppCompatActivity {
                     refnum.requestFocus();
                     return;
                 }
+
                 Intent intent = new Intent(masm.this, CardForm.class);
+                String s1 = anmt.getText().toString();
+                String s2 = mazm.getText().toString();
+                String s3 = refnum.getText().toString();
+                intent.putExtra("anmt1", s1);
+                intent.putExtra("set1", s2);
+                intent.putExtra("sett1", s3);
                 startActivity(intent);
             }
         });

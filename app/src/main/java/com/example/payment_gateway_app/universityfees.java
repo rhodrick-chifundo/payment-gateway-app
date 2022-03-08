@@ -41,6 +41,12 @@ Button ucredit, udebit;
                     return;
                 }
                 Intent intent = new Intent(universityfees.this, CardForm.class);
+                String s1 = anmt.getText().toString();
+                String s2 = fee.getText().toString();
+                String s3 = idnam.getText().toString();
+                intent.putExtra("anmt1", s1);
+                intent.putExtra("set1", s2);
+                intent.putExtra("sett1", s3);
                 startActivity(intent);
             }
         });

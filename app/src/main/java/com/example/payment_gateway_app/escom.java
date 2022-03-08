@@ -41,6 +41,12 @@ Button Ecredit, Edebit;
                     return;
                 }
                 Intent intent= new Intent(escom.this, CardForm.class);
+                String ss1 = anmt.getText().toString();
+                String ss2 = escon.getText().toString();
+                String ss3 = refnum.getText().toString();
+                intent.putExtra("set1", ss1);
+                intent.putExtra("anmt1", ss2);
+                intent.putExtra("sett1", ss3);
                 startActivity(intent);
             }
         });

@@ -41,6 +41,12 @@ public class waterboard extends AppCompatActivity {
                     return;
                 }
                 Intent intent =  new Intent(waterboard.this, CardForm.class);
+                String s1 = anmt.getText().toString();
+                String s2 = waterb.getText().toString();
+                String s3 = refnum.getText().toString();
+                intent.putExtra("anmt1", s1);
+                intent.putExtra("set1", s2);
+                intent.putExtra("sett1", s3);
                 startActivity(intent);
             }
         });

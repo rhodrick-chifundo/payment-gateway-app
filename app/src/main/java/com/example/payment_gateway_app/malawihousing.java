@@ -35,6 +35,12 @@ public class malawihousing extends AppCompatActivity {
                     return;
                 }
                 Intent intent = new Intent(malawihousing.this, CardForm.class);
+                String ss1 = anmt.getText().toString();
+                String ss2 = housing.getText().toString();
+                String ss3 = refnum.getText().toString();
+                intent.putExtra("anmt1", ss1);
+                intent.putExtra("set1", ss2);
+                intent.putExtra("sett1", ss3);
                 startActivity(intent);
             }
         });
