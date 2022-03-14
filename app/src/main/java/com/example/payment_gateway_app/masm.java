@@ -11,21 +11,27 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class masm extends AppCompatActivity {
-    Button mcredit, mdebit;
+
+    String s1;
     EditText anmt, refnum;
-    TextView mazm;
+    TextView meth1;
+
+    Button cont;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_masm);
-        mcredit = (Button)findViewById(R.id.btn6);
-        mdebit = (Button)findViewById(R.id.btn2);
         anmt = (EditText)findViewById(R.id.masamount);
         refnum = (EditText)findViewById(R.id.masmita);
-        mazm = (TextView)findViewById(R.id.txv7);
+        meth1 = (TextView)findViewById(R.id.mmetch1);
+        cont = (Button)findViewById(R.id.bbb);
 
-        mcredit.setOnClickListener(new View.OnClickListener() {
+
+        s1 = getIntent().getExtras().getString("ment");
+        meth1.setText(s1);
+
+      cont.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String Wamount = anmt.getText().toString();
@@ -41,41 +47,18 @@ public class masm extends AppCompatActivity {
                     return;
                 }
 
-                Intent intent = new Intent(masm.this, CardForm.class);
-                String s1 = anmt.getText().toString();
-                String s2 = mazm.getText().toString();
-                String s3 = refnum.getText().toString();
-                intent.putExtra("anmt1", s1);
-                intent.putExtra("set1", s2);
-                intent.putExtra("sett1", s3);
-                startActivity(intent);
+                Intent intent = new Intent(masm.this, CredeptCard.class);
+//                String s1 = anmt.getText().toString();
+//                String s2 = meth1.getText().toString();
+//                String s3 = refnum.getText().toString();
+//                intent.putExtra("anmt1", s1);
+//                intent.putExtra("set1", s2);
+//                intent.putExtra("sett1", s3);
+//                startActivity(intent);
+//                anmt.setText("");
+//                refnum.setText("");
             }
         });
 
-        mdebit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String Wamount = anmt.getText().toString();
-                if(TextUtils.isEmpty(Wamount)){
-                    anmt.setError("please fill in amount ");
-                    anmt.requestFocus();
-                    return;
-                }
-                String reff = refnum.getText().toString();
-                if(TextUtils.isEmpty(reff)){
-                    refnum.setError("please fill in reference number ");
-                    refnum.requestFocus();
-                    return;
-                }
-                String s1 = anmt.getText().toString();
-                String s2 = mazm.getText().toString();
-                String s3 = refnum.getText().toString();
-                Intent intent = new Intent(masm.this, debitCard.class);
-                intent.putExtra("anmt", s1);
-                intent.putExtra("set", s2);
-                intent.putExtra("sett", s3);
-                startActivity(intent);
-            }
-        });
     }
 }
