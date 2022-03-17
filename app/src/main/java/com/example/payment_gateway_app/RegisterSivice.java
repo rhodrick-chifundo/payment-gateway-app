@@ -15,7 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterSivice extends AppCompatActivity {
     EditText Svname, Sbankaname, Sbanknum, SvUname;
-    TextView Svbalance, register3;
+    TextView Svbalance, home, register3;
     Button submit1;
     FirebaseDatabase database;
     DatabaseReference check, check2, check3, check4;
@@ -33,6 +33,7 @@ public class RegisterSivice extends AppCompatActivity {
         Svbalance = (TextView)findViewById(R.id.balasi);
         submit1 = (Button) findViewById(R.id.sub1);
         register3 = (TextView) findViewById(R.id.reg3);
+       home = (TextView) findViewById(R.id.home2);
 
 
 
@@ -84,6 +85,13 @@ public class RegisterSivice extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(RegisterSivice.this, AddCustomers.class);
+                startActivity(intent);
+            }
+        });
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(RegisterSivice.this, MainActivity.class);
                 startActivity(intent);
             }
         });
