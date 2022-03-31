@@ -1,5 +1,6 @@
-package com.example.payment_gateway_app;
+ package com.example.payment_gateway_app;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,8 +9,13 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -19,6 +25,7 @@ public class RegisterSivice extends AppCompatActivity {
     Button submit1;
     FirebaseDatabase database;
     DatabaseReference check, check2, check3, check4;
+    ProgressBar pBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +41,7 @@ public class RegisterSivice extends AppCompatActivity {
         submit1 = (Button) findViewById(R.id.sub1);
         register3 = (TextView) findViewById(R.id.reg3);
        home = (TextView) findViewById(R.id.home2);
+       pBar = (ProgressBar)findViewById(R.id.pBar1);
 
 
 
@@ -46,7 +54,7 @@ public class RegisterSivice extends AppCompatActivity {
         submit1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+              pBar.setVisibility(View.VISIBLE);
               String accountBalance = Svbalance.getText().toString();
               String accountName = SvUname.getText().toString();
               String accountNumber = Sbanknum.getText().toString();
@@ -76,10 +84,20 @@ public class RegisterSivice extends AppCompatActivity {
                 Sbankaname.setText(null);
                 Sbanknum.setText(null);
                 SvUname.setText(null);
-
+                check2.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                            if(task.isSuccessful()){
+                                Toast.makeText(RegisterSivice.this,"registration is successful ", Toast.LENGTH_LONG).show();
+                                pBar.setVisibility(View.GONE);
+                                SvUname.setText("registration is successful");
+                            }
+                    }
+                });
 
             }
         });
+
 
         register3.setOnClickListener(new View.OnClickListener() {
             @Override

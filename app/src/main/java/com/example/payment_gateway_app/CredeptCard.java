@@ -9,11 +9,13 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.HashMap;
@@ -22,7 +24,7 @@ import java.util.Map;
 public class CredeptCard extends AppCompatActivity {
     String s1, s2, s3, s4, s5, s6;
     TextView result1, result2,result3;
-    TextView t1, t3, t4, home, tNun3, tbal4, tcvv5, tv6, t7, t8,t9, t10, t11, t12;
+    TextView t1, t3, t4, home, tNun3, tbal4, tcvv5, tv6, t7, t8,t9, t10, t11, t12, t13;
      EditText et1, Cnumber2, Cname3, Ccvv4, ett8, ett9, ett10, ett11;
     FirebaseDatabase database;
     DatabaseReference check, check2, check3;
@@ -43,6 +45,7 @@ public class CredeptCard extends AppCompatActivity {
         et1 = (EditText) findViewById(R.id.refnum);
         t11 = (TextView)findViewById(R.id.ttt6);
         t12 = (TextView)findViewById(R.id.ttt7);
+        t13 = (TextView)findViewById(R.id.canel);
         ett10 = (EditText) findViewById(R.id.Cnum1);
         tNun3 = (TextView)findViewById(R.id.txb);
         tbal4 = (TextView)findViewById(R.id.txa);
@@ -89,6 +92,97 @@ public class CredeptCard extends AppCompatActivity {
                   String a5 = ett10.getText().toString();
                   String a6 = et1.getText().toString();
 
+
+
+                 String checkName = Cname3.getText().toString();
+                 check = database.getReference("BANK").child("OLDINALLY CUSTOMERS");
+                 Query chech1 = check.orderByChild("account name").equalTo(checkName);
+                 chech1.addListenerForSingleValueEvent(new ValueEventListener() {
+                     @Override
+                     public void onDataChange(@NonNull DataSnapshot snapshot) {
+                         if(snapshot.exists()){
+                             t11.setVisibility(View.VISIBLE);
+                             t10.setVisibility(View.VISIBLE);
+                             s4 = Cname3.getText().toString();
+                             check.child(s4).addValueEventListener(new ValueEventListener() {
+                                 @Override
+                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                     String Cnumber = snapshot.child("card number").getValue().toString();
+                                     String balance = snapshot.child("account balance").getValue().toString();
+                                     String cvv1 = snapshot.child("cvv").getValue().toString();
+                                     String expire = snapshot.child("expirationDate").getValue().toString();
+                                     tNun3.setText(Cnumber);
+                                     tbal4.setText(balance);
+                                     tcvv5.setText(cvv1);
+                                     t4.setText(expire);
+                                 }
+
+                                 @Override
+                                 public void onCancelled(@NonNull DatabaseError error) {
+
+                                 }
+                             });
+
+                         }
+                         else {
+                             Cname3.setError("invalid card name");
+                             Cname3.requestFocus();
+                             return;
+                         }
+                     }
+
+                     @Override
+                     public void onCancelled(@NonNull DatabaseError error) {
+
+                     }
+                 });
+//                 String refNumber = et1.getText().toString();
+//                 s5 = t1.getText().toString();
+//                 check3 = database.getReference("MERCHANTS CUSTOMERS").child(s5);
+//                 Query check0 = check3.orderByChild("referenceNumber").equalTo(refNumber);
+//                 check0.addListenerForSingleValueEvent(new ValueEventListener() {
+//                     @Override
+//                     public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                         if(snapshot.exists()){
+//                             t11.setVisibility(View.VISIBLE);
+//                             t10.setVisibility(View.VISIBLE);
+//                             s4 = Cname3.getText().toString();
+//                             check.child(s4).addValueEventListener(new ValueEventListener() {
+//                                 @Override
+//                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                                     String Cnumber = snapshot.child("card number").getValue().toString();
+//                                     String balance = snapshot.child("account balance").getValue().toString();
+//                                     String cvv1 = snapshot.child("cvv").getValue().toString();
+//                                     String expire = snapshot.child("expirationDate").getValue().toString();
+//                                     tNun3.setText(Cnumber);
+//                                     tbal4.setText(balance);
+//                                     tcvv5.setText(cvv1);
+//                                     t4.setText(expire);
+//                                 }
+//
+//                                 @Override
+//                                 public void onCancelled(@NonNull DatabaseError error) {
+//
+//                                 }
+//                             });
+//
+//                         }
+//                         else {
+//                             Cname3.setError("invalid reference number");
+//                             Cname3.requestFocus();
+//                             return;
+//                         }
+//
+//                     }
+//
+//                     @Override
+//                     public void onCancelled(@NonNull DatabaseError error) {
+//
+//                     }
+//                 });
+
+
+
                  if(TextUtils.isEmpty(a1)){
                      Cnumber2.setError("fill card number");
                      Cnumber2.requestFocus();
@@ -119,31 +213,8 @@ public class CredeptCard extends AppCompatActivity {
                      et1.requestFocus();
                      return;
                  }
-                 else {
-                     t11.setVisibility(View.VISIBLE);
-                     t10.setVisibility(View.VISIBLE);
 
-                     s4 = Cname3.getText().toString();
-                     check.child(s4).addValueEventListener(new ValueEventListener() {
-                         @Override
-                         public void onDataChange(@NonNull DataSnapshot snapshot) {
-                             String Cnumber = snapshot.child("card number").getValue().toString();
-                             String balance = snapshot.child("account balance").getValue().toString();
-                             String cvv1 = snapshot.child("cvv").getValue().toString();
-                             String expire = snapshot.child("expirationDate").getValue().toString();
-                             tNun3.setText(Cnumber);
-                             tbal4.setText(balance);
-                             tcvv5.setText(cvv1);
-                             t4.setText(expire);
-                         }
-
-                         @Override
-                         public void onCancelled(@NonNull DatabaseError error) {
-
-                         }
-                     });
-
-                 }
+              else  { }
 
                  s3 = t1.getText().toString();
                      check2.child(s3).addValueEventListener(new ValueEventListener() {
@@ -223,7 +294,10 @@ public class CredeptCard extends AppCompatActivity {
                      return;
                  }
 
+
+
                  else {
+                     t13.setVisibility(View.VISIBLE);
                    t12.setVisibility(View.VISIBLE);
                      long a1 = Long.parseLong(ett10.getText().toString());
                      long  a2 = Long.parseLong(tbal4.getText().toString());
@@ -237,7 +311,7 @@ public class CredeptCard extends AppCompatActivity {
 
                      long d1 = Long.parseLong(t7.getText().toString());
                      long d2 = Long.parseLong(ett10.getText().toString());
-                     long d3 = d1 + d2;
+                     long d3 = d1 - d2;
                      result3.setText(String.valueOf(d3));
                }
 
@@ -246,6 +320,7 @@ public class CredeptCard extends AppCompatActivity {
          t10.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
+
                  long a = Long.parseLong(tNun3.getText().toString());
                  long b = Long.parseLong(Cnumber2.getText().toString());
 
@@ -274,7 +349,7 @@ public class CredeptCard extends AppCompatActivity {
 
                  else {
                      t12.setVisibility(View.VISIBLE);
-
+                     t13.setVisibility(View.VISIBLE);
                      Long  a1 = Long.parseLong(ett10.getText().toString());
                      Long  a2 = Long.parseLong(tbal4.getText().toString());
                      long  c1 = a2 - a1;
@@ -287,7 +362,7 @@ public class CredeptCard extends AppCompatActivity {
 
                      long  d1 = Long.parseLong(t7.getText().toString());
                      long  d2 = Long.parseLong(ett10.getText().toString());
-                     long d3 = d1 + d2;
+                     long d3 = d1 - d2;
                      result3.setText(String.valueOf(d3));
                  }
 
@@ -295,8 +370,13 @@ public class CredeptCard extends AppCompatActivity {
              }
          });
          t12.setOnClickListener(new View.OnClickListener() {
+
              @Override
              public void onClick(View v) {
+                 t11.setVisibility(View.INVISIBLE);
+                 t10.setVisibility(View.INVISIBLE);
+
+
                  s4 = Cname3.getText().toString();
                  check.child(s4).addValueEventListener(new ValueEventListener() {
 
@@ -356,6 +436,18 @@ public class CredeptCard extends AppCompatActivity {
             }
 
         });
+         t13.setOnClickListener(new View.OnClickListener() {
+             @Override
+             public void onClick(View v) {
+                 Cname3.setText("");
+                 Cnumber2.setText("");
+                 Ccvv4.setText("");
+                 t3.setText("");
+                 ett10.setText("");
+                 et1.setText("");
+
+             }
+         });
 
 
     }
