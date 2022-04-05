@@ -90,7 +90,7 @@ public class RegisterSivice extends AppCompatActivity {
                             if(task.isSuccessful()){
                                 Toast.makeText(RegisterSivice.this,"registration is successful ", Toast.LENGTH_LONG).show();
                                 pBar.setVisibility(View.GONE);
-                                SvUname.setText("registration is successful");
+
                             }
                     }
                 });
