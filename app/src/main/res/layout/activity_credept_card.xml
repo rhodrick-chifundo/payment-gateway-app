@@ -9,8 +9,12 @@
 
     <EditText
         android:id="@+id/et3"
-        android:layout_width="339dp"
+        android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:backgroundTint="#2196F3"
         android:ems="10"
         android:hint="****    ****    ****    ****"
@@ -26,8 +30,10 @@
 
     <EditText
         android:id="@+id/et4"
-        android:layout_width="191dp"
-        android:layout_height="42dp"
+        android:layout_width="178dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:backgroundTint="#2196F3"
         android:ems="10"
         android:hint="02/09/2000"
@@ -38,12 +44,16 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.477" />
+        app:layout_constraintVertical_bias="0.501" />
 
     <EditText
         android:id="@+id/et6"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:backgroundTint="#2196F3"
         android:ems="10"
         android:hint="Card name"
@@ -54,12 +64,14 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.356" />
+        app:layout_constraintVertical_bias="0.384" />
 
     <EditText
         android:id="@+id/et7"
         android:layout_width="88dp"
         android:layout_height="47dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:backgroundTint="#2196F3"
         android:ems="10"
         android:hint="*   *    *"
@@ -67,15 +79,17 @@
         android:textColor="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.978"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.473" />
+        app:layout_constraintVertical_bias="0.488" />
 
     <TextView
         android:id="@+id/t1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:text="Card number"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -93,10 +107,10 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.132"
+        app:layout_constraintHorizontal_bias="0.135"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.446" />
+        app:layout_constraintVertical_bias="0.438" />
 
     <TextView
         android:id="@+id/t4"
@@ -106,10 +120,10 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.948"
+        app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.423" />
+        app:layout_constraintVertical_bias="0.443" />
 
     <TextView
         android:id="@+id/t5"
@@ -130,6 +144,8 @@
         android:id="@+id/txa"
         android:layout_width="100dp"
         android:layout_height="33dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="Accbal1"
         android:textColor="#F5FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -180,8 +196,10 @@
 
     <TextView
         android:id="@+id/t6"
-        android:layout_width="107dp"
+        android:layout_width="127dp"
         android:layout_height="27dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="accbal2"
         android:textColor="#F5FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -195,6 +213,8 @@
         android:id="@+id/t8"
         android:layout_width="92dp"
         android:layout_height="26dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:text="bill"
         android:textColor="#F5FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -211,24 +231,29 @@
         android:background="@drawable/simple_imput"
         android:text="CREDIT CARD"
         android:textSize="20dp"
-        android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.68" />
-
-    <TextView
-        android:id="@+id/ttt6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/simple_imput"
-        android:text="DEBIT CARD"
-        android:textSize="20dp"
+        android:textColor="#2196F3"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.013"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.784" />
+
+    <TextView
+        android:id="@+id/ttt6"
+        android:layout_width="117dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:background="@drawable/simple_imput"
+        android:text="DEBIT CARD"
+        android:textSize="20dp"
+        android:textColor="#2196F3"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.68" />
@@ -237,9 +262,12 @@
         android:id="@+id/ttt7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:background="@drawable/simple_imput"
         android:text="CONFIRM"
         android:textSize="20dp"
+        android:textColor="#2196F3"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -266,6 +294,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="result1"
+        android:textColor="#F5FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.945"
@@ -278,6 +307,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="result2"
+        android:textColor="#F5FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
@@ -290,6 +320,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="result3"
+        android:textColor="#F5FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.954"
@@ -301,9 +332,11 @@
         android:id="@+id/refnum"
         android:layout_width="170dp"
         android:layout_height="41dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
         android:backgroundTint="#2196F3"
         android:ems="10"
-        android:hint="reference number"
+        android:hint="Reference number"
         android:inputType="number"
         android:textColor="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -315,11 +348,13 @@
 
     <EditText
         android:id="@+id/Cnum1"
-        android:layout_width="212dp"
-        android:layout_height="41dp"
+        android:layout_width="170dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:backgroundTint="#2196F3"
         android:ems="10"
-        android:hint="enter amount"
+        android:hint="Enter amount"
         android:inputType="number"
         android:textColor="#2196F3"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -333,6 +368,8 @@
         android:id="@+id/textView"
         android:layout_width="400dp"
         android:layout_height="25dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
         android:text="Card details--------------------------------------------------------------------------"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -371,16 +408,17 @@
         android:id="@+id/canel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CANCEL"
-        android:textSize="20dp"
         android:background="@drawable/simple_imput"
+        android:text="CANCEL"
+        android:textColor="#2196F3"
+        android:textSize="20dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.463"
+        app:layout_constraintHorizontal_bias="0.941"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.889" />
+        app:layout_constraintVertical_bias="0.773" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

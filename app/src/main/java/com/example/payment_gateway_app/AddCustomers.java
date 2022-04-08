@@ -51,21 +51,25 @@ public class AddCustomers extends AppCompatActivity {
                 String referenceNumber = Csreff.getText().toString();
                 String customerBill = CSbill.getText().toString();
                 if(TextUtils.isEmpty(serviceName)){
+                    pbar2.setVisibility(View.GONE);
                     Svname.setError("enter company name");
                     Svname.requestFocus();
                     return;
                 }
                 if(TextUtils.isEmpty(customerName)){
+                    pbar2.setVisibility(View.GONE);
                     CUsaname.setError("enter customer name");
                     CUsaname.requestFocus();
                     return;
                 }
                 if(TextUtils.isEmpty(referenceNumber)){
+                    pbar2.setVisibility(View.GONE);
                     Csreff.setError("enter reference number");
                     Csreff.requestFocus();
                     return;
                 }
                 if(TextUtils.isEmpty(customerBill)){
+                    pbar2.setVisibility(View.GONE);
                     CSbill.setError("enter customer bill or 0MK if customer have no bill");
                     CSbill.requestFocus();
                     return;
@@ -80,7 +84,7 @@ public class AddCustomers extends AppCompatActivity {
                    @Override
                    public void onComplete(@NonNull Task<DataSnapshot> task) {
                       if(task.isSuccessful()){
-                          Toast.makeText(AddCustomers.this,"operation successful ", Toast.LENGTH_LONG).show();
+                          Toast.makeText(AddCustomers.this,"operation successful! you can add more customers or leave", Toast.LENGTH_LONG).show();
                           pbar2.setVisibility(View.GONE);
                       }
                    }

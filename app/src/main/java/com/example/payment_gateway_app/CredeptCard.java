@@ -313,6 +313,7 @@ public class CredeptCard extends AppCompatActivity {
                      long d2 = Long.parseLong(ett10.getText().toString());
                      long d3 = d1 - d2;
                      result3.setText(String.valueOf(d3));
+                 Toast.makeText(CredeptCard.this,"entered amount will be deducted from your bank",Toast.LENGTH_LONG ).show();
                }
 
              }
@@ -364,6 +365,7 @@ public class CredeptCard extends AppCompatActivity {
                      long  d2 = Long.parseLong(ett10.getText().toString());
                      long d3 = d1 - d2;
                      result3.setText(String.valueOf(d3));
+                     Toast.makeText(CredeptCard.this,"entered amount will be deducted from your bank",Toast.LENGTH_LONG ).show();
                  }
 
 
@@ -375,6 +377,8 @@ public class CredeptCard extends AppCompatActivity {
              public void onClick(View v) {
                  t11.setVisibility(View.INVISIBLE);
                  t10.setVisibility(View.INVISIBLE);
+                 t12.setVisibility(View.INVISIBLE);
+                 t13.setVisibility(View.INVISIBLE);
 
 
                  s4 = Cname3.getText().toString();

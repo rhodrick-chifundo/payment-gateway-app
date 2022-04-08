@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
              public void onClick(View v) {
                  String mennt = mechant.getText().toString();
                  if(TextUtils.isEmpty(mennt)){
-                     mechant.setError("type or select merchant on the list");
+                     mechant.setError("enter merchant name");
                      mechant.requestFocus();
                      return;
                  }

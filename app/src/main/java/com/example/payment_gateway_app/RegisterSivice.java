@@ -16,10 +16,13 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
-public class RegisterSivice extends AppCompatActivity {
+ public class RegisterSivice extends AppCompatActivity {
     EditText Svname, Sbankaname, Sbanknum, SvUname;
     TextView Svbalance, home, register3;
     Button submit1;
@@ -60,40 +63,66 @@ public class RegisterSivice extends AppCompatActivity {
               String accountNumber = Sbanknum.getText().toString();
               String serviceName = Svname.getText().toString();
               if(TextUtils.isEmpty(accountName)){
+                  pBar.setVisibility(View.GONE);
                     SvUname.setError("enter account name");
                     SvUname.requestFocus();
                     return;
                 }
               if(TextUtils.isEmpty(accountNumber)){
-                  Sbanknum.setError("enter account name");
+                  pBar.setVisibility(View.GONE);
+                  Sbanknum.setError("enter bank name");
                   Sbanknum.requestFocus();
                   return;
               }
-              if(TextUtils.isEmpty(serviceName)){
+              if(TextUtils.isEmpty(serviceName)) {
+                  pBar.setVisibility(View.GONE);
                   Svname.setError("enter your company name");
                   Svname.requestFocus();
                   return;
 
-                }
-              
-                merchants merchants1 = new merchants(accountBalance, accountName, accountNumber, serviceName);
-                merchants2 merchantsa = new merchants2(serviceName);
-                check2.child(serviceName).setValue(merchants1);
-                check3.child(serviceName).setValue(merchantsa);
-                Svname.setText(null);
-                Sbankaname.setText(null);
-                Sbanknum.setText(null);
-                SvUname.setText(null);
-                check2.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<DataSnapshot> task) {
-                            if(task.isSuccessful()){
-                                Toast.makeText(RegisterSivice.this,"registration is successful ", Toast.LENGTH_LONG).show();
-                                pBar.setVisibility(View.GONE);
+              }
+              else {
+                    String name = Svname.getText().toString();
+                  check2 = database.getReference("BANK").child("MERCHANTS");
+                  Query cheke0 = check2.orderByChild("serviceName").equalTo(name);
+                  cheke0.addListenerForSingleValueEvent(new ValueEventListener() {
+                      @Override
+                      public void onDataChange(@NonNull DataSnapshot snapshot) {
+                          if(snapshot.exists()){
+                              pBar.setVisibility(View.GONE);
+                              Svname.setError(" merchant already exist");
+                              Svname.requestFocus();
+                              return;
+                          }
+                          else {
+                              merchants merchants1 = new merchants(accountBalance, accountName, accountNumber, serviceName);
+                              merchants2 merchantsa = new merchants2(serviceName);
+                              check2.child(serviceName).setValue(merchants1);
+                              check3.child(serviceName).setValue(merchantsa);
+                              Svname.setText(null);
+                              Sbankaname.setText(null);
+                              Sbanknum.setText(null);
+                              SvUname.setText(null);
+                              check2.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                                  @Override
+                                  public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                      if (task.isSuccessful()) {
+                                          Toast.makeText(RegisterSivice.this, "registration is successful! you can register more companies or leave", Toast.LENGTH_LONG).show();
+                                          pBar.setVisibility(View.GONE);
 
-                            }
-                    }
-                });
+                                      }
+                                  }
+                              });
+                          }
+                      }
+
+                      @Override
+                      public void onCancelled(@NonNull DatabaseError error) {
+
+                      }
+                  });
+
+              }
 
             }
         });
