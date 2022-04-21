@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/paipal0"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CredeptCard">
@@ -211,12 +212,14 @@
         android:background="@drawable/simple_imput"
         android:text="CREDIT CARD"
         android:textSize="20dp"
+        android:textColor="#2196F3"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.68" />
+        app:layout_constraintVertical_bias="0.744" />
 
     <TextView
         android:id="@+id/ttt6"
@@ -224,6 +227,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/simple_imput"
         android:text="DEBIT CARD"
+        android:textColor="#2196F3"
         android:textSize="20dp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -240,6 +244,7 @@
         android:background="@drawable/simple_imput"
         android:text="CONFIRM"
         android:textSize="20dp"
+        android:textColor="#2196F3"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -266,6 +271,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="result1"
+        android:textColor="#ffffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.945"
@@ -278,6 +284,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="result2"
+        android:textColor="#ffffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
@@ -290,6 +297,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="result3"
+        android:textColor="#ffffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.954"
@@ -371,9 +379,10 @@
         android:id="@+id/canel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/simple_imput"
         android:text="CANCEL"
         android:textSize="20dp"
-        android:background="@drawable/simple_imput"
+        android:textColor="#2196F3"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -381,6 +390,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.889" />
+
+    <TextView
+        android:id="@+id/paipal1"
+        android:layout_width="126dp"
+        android:layout_height="34dp"
+        android:background="@drawable/simple_imput"
+        android:text="PAYPAL"
+        android:textColor="#2196F3"
+        android:textSize="20dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.801" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

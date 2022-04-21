@@ -57,6 +57,7 @@ public class masm extends AppCompatActivity {
 //                startActivity(intent);
 //                anmt.setText("");
 //                refnum.setText("");
+                //<activity android:name=".PaymentDetails" />
             }
         });
 

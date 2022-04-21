@@ -59,16 +59,15 @@ public class Paypal extends AppCompatActivity {
         });
     }
 
-    private void processpayment() {
+   private void processpayment() {
         amount = ettamount.getText().toString();
         PayPalPayment payPalPayment = new PayPalPayment(new BigDecimal(String.valueOf(amount)),"USD", "MY PAYMENT AMOUNT", PayPalPayment.PAYMENT_INTENT_SALE);
         Intent intent = new Intent(this, PaymentActivity.class);
         intent.putExtra(PayPalService.EXTRA_PAYPAL_CONFIGURATION, config1);
         intent.putExtra(PaymentActivity.EXTRA_PAYMENT, payPalPayment);
-        startActivityForResult(intent, PAYPAL_REQUEST_CODE);
-        //Donate for EDMTDev
+       startActivityForResult(intent, PAYPAL_REQUEST_CODE);
 
-    }
+  }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
